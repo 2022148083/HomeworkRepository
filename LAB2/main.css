@@ -1,3 +1,42 @@
 h1{
     font-size: 20pt; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+hr{
+    border: solid 1px;
+    color: black;
+}
+h2{
+    font-size: 12pt;
+    text-decoration-line: underline overline;
+    text-decoration-color: red;
+}
+#submit{
+    width: 100px;
+    height: 25px;
+    padding: 1px 30px;
+    background-color: red;
+    margin-right: -4px;
+}
+#login_submit{
+    width: 100px;
+    height: 25px;
+    padding: 1px 30px;
+    background-color: green;
+    margin-right: -4px;
+}
+#cancel{
+    width: 100px;
+    height: 25px;
+    background-color: blue;
+    margin-left: -4px;
+}
+#login_cancel{
+    width: 100px;
+    height: 25px;
+    background-color: skyblue;
+    margin-left: -4px;
+}
+p{
+    text-align: left;
+    margin: 0;
+}
