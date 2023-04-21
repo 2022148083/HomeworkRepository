@@ -1,0 +1,229 @@
+h1{
+    font-size: 20pt; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+hr{
+    border: solid 1px;
+    color: black;
+}
+#sharp{
+    border: solid 0.1px;
+    color: black;
+}
+h2{
+    font-size: 12pt;
+    text-decoration-line: underline overline;
+    text-decoration-color: red;
+}
+p{
+    text-align: left;
+    margin: 0;
+}
+
+#submit{
+    width: 100px;
+    height: 25px;
+    padding: 1px 30px;
+    background-color: #B6EADA;
+    margin-right: -4px;
+}
+#login_submit{
+    width: 100px;
+    height: 25px;
+    padding: 1px 30px;
+    background-color: green;
+    margin-right: -4px;
+}
+#cancel{
+    width: 100px;
+    height: 25px;
+    background-color: #FFD4D4;
+    margin-left: -4px;
+}
+#login_signup{
+    width: 100px;
+    height: 25px;
+    background-color: skyblue;
+    margin-left: -4px;
+}
+
+.header-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 1020px;
+    margin: 0 auto;
+}
+
+.header-text {
+    position: relative;
+    animation-duration: 2s;
+    animation-name: slideLeft;
+    animation-iteration-count: 1;
+    font-size: 20pt;
+    animation-fill-mode: forwards;
+}
+  
+@keyframes slideLeft {
+    0% {
+      left: 100%;
+    }
+    100% {
+      left: 0%;
+    }
+}
+
+#main{
+    text-decoration-line: underline overline;
+    text-decoration-color: red;
+}
+
+.Navigation{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    max-width: 1020px;
+    margin: 0 auto;
+}
+
+.main_content{
+    max-width: 1020px;
+    margin: 0 auto;
+}
+
+#title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    max-width: 1020px;
+    margin: 0 auto;
+}
+  
+.movies {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;    
+    max-width: 1020px;
+    margin: 0 auto;
+    gap: 20px;
+}
+  
+.movie {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: white;
+    border: 1px solid black;
+    width: 170px;
+    height: 400px;
+    margin: 10px;
+    line-height: 75px;
+}
+.movie img {
+    width: 60px;
+    height: 100px;
+    margin-right: 20px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+.movie img:hover {
+    transform: scale(2, 2);
+    transition-duration: 2s;
+    filter: blur(5px);
+  }
+  
+.movie .overlay {
+    position: relative;
+    display: none;
+    top: -30px;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+.movie img:hover + .overlay {
+    display: block;
+  }
+  
+.movie .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 800px) and (min-width: 481px) {
+    .movies {
+      display: grid;
+      grid-template-columns: repeat(2, 190px);
+      grid-gap: 20px;
+    }
+    .movie {
+      display: flex;
+      flex-direction: row;
+
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .movies {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .movie {
+      display: flex;
+      flex-direction: row;
+
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .img {
+      width: calc(50% - 10px);
+      margin-right: 20px;
+    }
+    .img:last-child {
+      margin-right: 0;
+    }
+  }
+  
+
+.intro{
+    max-width: 1020px;
+    margin: 0 auto;
+}
+#intro_title{
+    font-size: 20pt;
+    font-weight: bold;
+    max-width: 1020px;
+    margin: 0 auto;
+}
+.intro_detail{
+    max-width: 1020px;
+    margin: 0 auto;
+}
+
+section{column-count: 2;column-gap: 30px; column-rule: 1px outset black;}
+
+@media(max-width: 800px) {
+    .Navigation {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 1020px;
+        margin: 0 auto;
+    }
+    section{column-count: 1;column-gap: 30px; column-rule: 1px outset black;}
+}
+
+
+  

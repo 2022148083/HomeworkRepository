@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel = "stylesheet" type = "text/css" href = "main.css">
+        <meta charset="utf-8">
+        <title>login</title>
+    </head>
+    <body>
+        <h1>Welcome to INTERNET-PROGRAMMING SHOP</h1>
+        <h2 style="display: inline" onclick="location.href='index.html'">메인페이지</h2>
+        <a onclick="location.href='login.html'">로그인</a> 
+        <a onclick="location.href='signup.html'">회원가입</a> 
+        <hr>
+        <br>
+        <form method = "get" autocomplete = "on" action="login.html">
+            <p>회원 정보(필수)</p>
+            <p>
+                <label>유저아이디 :<input name = "id" type = "text" placeholder="아이디를 입력하세요" /> </label>
+            </p>
+            <p>
+                <label>비밀번호 :<input name = "password" type = "text" placeholder="비밀번호 입력하세요" /> </label>
+            </p>
+            <p>
+                <label>비밀번호 확인 :<input name = "checkpassword" type = "text" placeholder="비밀번호 확인" /> </label>
+            </p>
+            <p><input id = "login_submit" type = "submit" value = "로그인"/>
+                <input id = "login_signup" type = "button" value = "회원가입" /></p>
+        </form>
+        <hr>
+    </body>
+</html>
