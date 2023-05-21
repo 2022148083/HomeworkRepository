@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel = "stylesheet" type = "text/css" href = "main.css">
+        <meta charset="utf-8">
+        <title>signup</title>
+    </head>
+    <body>
+        <h1>Welcome to INTERNET-PROGRAMMING SHOP</h1>
+        <h2 style="display: inline" onclick="location.href='index.html'">메인페이지</h2>
+        <a onclick="location.href='login.html'">로그인</a> 
+        <a onclick="location.href='signup.html'">회원가입</a> 
+        <hr>
+        <br>
+        <form method = "get" autocomplete = "on" action="signup.html">
+            <p>개인정보(필수)</p>
+            <p>
+                <label>이름 :<input name = "name" type = "text" placeholder="이름을 입력하세요" 
+                autofocus /> </label>
+            </p>
+            <p>
+                <label>생일 :<input name = "birthday" type="date" required/></label>
+            </p>
+            <p>
+                <label>학년 :<input name = "grade" type = "number" step = "1"/> </label>
+            </p>
+            <p>
+                <label>전화번호 :<input name = "phone" type = "text" placeholder="(###)###-####" /> </label>
+            </p>
+            <p>
+                <label>유저아이디 :<input name = "id" type = "text" placeholder="아이디를 입력하세요" /> </label>
+            </p>
+            <p>
+                <label>비밀번호 :<input name = "password" type = "text" placeholder="비밀번호 입력하세요" /> </label>
+            </p>
+            <p>
+                <label>비밀번호 확인 :<input name = "checkpassword" type = "text" placeholder="비밀번호 확인" /> </label>
+            </p>
+            <p><input id = "submit" type = "submit" value = "Signup"/>
+            <input id = "cancel" type = "reset" value = "Cancel" /></p>
+        </form>
+        <hr>
+    </body>
+</html>

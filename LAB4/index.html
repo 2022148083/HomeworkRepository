@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <meta charset="utf-8">
+    <title>internet_programming</title>
+</head>
+<body>
+    <div class="header-container">
+        <h1 class="header-text">Welcome to Internet Programming Shop</h1>
+    </div>
+    <nav>
+        <div class="Navigation">
+            <div id="main" style="display: inline" onclick="location.href='index.html'">
+                Main Page</div>
+            <div onclick="location.href='login.html'">&nbsp; Login &nbsp;</div>
+            <div onclick="location.href='signup.html'">Signup</div>
+        </div>
+    </nav>
+
+    <hr>
+
+    <div class="main_content">
+        <div id="title">Products</div>
+        <hr>
+        <div>
+            <aside>
+                <form>
+                    <div class="go_down">
+                        <label for="category">Choose a category:</label>
+                        <select id="category">
+                            <option selected>All</option>
+                            <option>HTML</option>
+                            <option>CSS</option>
+                            <option>JAVA</option>
+                        </select>
+                    </div>
+                    <div class="go_down">
+                        <label for="searchTerm">Enter search term:</label>
+                        <input type="text" id="searchTerm" placeholder="e.g. HTML">
+                    </div>
+                    <div class="go_down">
+                        <label for="sort">Choose a sort:</label>
+                        <select id="sort">
+                            <option selected>none</option>
+                            <option>up</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button onclick="filterResults()">Filter results</button>
+                    </div>
+                </form>
+            </aside>
+        </div>
+        <div id="imageContainer" class="image-container"></div>
+    </div>
+
+    <script>
+        var container = document.getElementById("imageContainer");
+        var currentIndex = 0;
+        var clickedItems = [];
+
+        window.addEventListener("scroll", function() {
+            if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+                loadImagesFromJSON(10);
+            }
+        });
+
+        function loadImagesFromJSON(count) {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "product.json", true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var jsonData = JSON.parse(xhr.responseText);
+                    var images = jsonData.slice(currentIndex, currentIndex + count);
+
+                    images.forEach(function(item) {
+                        var container = document.createElement("div");
+                        container.className = "product-container";
+
+                        var img = document.createElement("img");
+                        img.src = item.image;
+                        img.className = "image-item";
+                        container.appendChild(img);
+
+                        var details = document.createElement("div");
+                        details.className = "product-details";
+
+                        var name = document.createElement("div");
+                        name.innerHTML = item.name;
+                        details.appendChild(name);
+
+                        var price = document.createElement("div");
+                        price.innerHTML = "$" + item.price;
+                        details.appendChild(price);
+
+                        container.appendChild(details);
+
+                        img.addEventListener("click", function() {
+                            img.classList.toggle("clicked");
+                            details.classList.toggle("clicked");
+                        });
+
+                        container.addEventListener("click", function(event) {
+                            event.stopPropagation();
+                        });
+
+                        document.getElementById("imageContainer").appendChild(container);
+                    });
+
+                    currentIndex += count;
+                }
+            };
+            xhr.send();
+        }
+        loadImagesFromJSON(5);
+
+function filterByCategory() {
+    var category = document.getElementById("category").value.toLowerCase();
+    var containers = document.getElementsByClassName("product-container");
+
+    for (var i = 0; i < containers.length; i++) {
+        var container = containers[i];
+        var categories = container.querySelectorAll(".product-details > div:first-child");
+        var categoryMatch = false;
+
+        for (var j = 0; j < categories.length; j++) {
+            var categoryName = categories[j].innerHTML.toLowerCase();
+
+            if (categoryName === category || category === "all") {
+                categoryMatch = true;
+                break;
+            }
+        }
+
+        if (categoryMatch) {
+            container.style.display = "block";
+        } else {
+            container.style.display = "none";
+        }
+    }
+}
+
+
+
+function filterBySearchTerm() {
+    var searchTerm = document.getElementById("searchTerm").value.toLowerCase();
+    var containers = document.getElementsByClassName("product-container");
+
+    for (var i = 0; i < containers.length; i++) {
+        containers[i].style.display = "none";
+    }
+
+    if (searchTerm === "") {
+        for (var i = 0; i < containers.length; i++) {
+            containers[i].style.display = "block";
+        }
+    } else {
+        for (var i = 0; i < containers.length; i++) {
+            var name = containers[i].querySelector(".product-details > div:first-child").innerHTML.toLowerCase();
+            if (name.includes(searchTerm)) {
+                containers[i].style.display = "block";
+            }
+        }
+    }
+}
+
+function filterResults() {
+    event.preventDefault();
+    var category = document.getElementById("category").value.toLowerCase();
+    var searchTerm = document.getElementById("searchTerm").value.toLowerCase();
+    var containers = document.getElementsByClassName("product-container");
+
+    for (var i = 0; i < containers.length; i++) {
+        var container = containers[i];
+        var name = container.querySelector(".product-details > div:first-child").innerHTML.toLowerCase();
+        var categoryMatch = category === "all" || name.includes(category);
+
+        var searchTermMatch = searchTerm === "" || name.includes(searchTerm);
+
+        if (categoryMatch && searchTermMatch) {
+            container.style.display = "block";
+        } else {
+            container.style.display = "none";
+        }
+    }
+
+    var sort = document.getElementById("sort").value;
+
+    if (sort === "up") {
+        var sortedContainers = Array.from(containers).sort(function(a, b) {
+            var priceA = parseFloat(a.querySelector(".product-details > div:nth-child(2)").innerHTML.replace("$", ""));
+            var priceB = parseFloat(b.querySelector(".product-details > div:nth-child(2)").innerHTML.replace("$", ""));
+            return priceA - priceB;
+        });
+
+        var parent = document.getElementById("imageContainer");
+        parent.innerHTML = "";
+        sortedContainers.forEach(function(container) {
+            parent.appendChild(container);
+        });
+    }
+}
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+[
+    {
+        "name" : "HTML핵심가이드",
+        "price" : 2,
+        "image" : "images/HTML1.png"
+    },
+    {
+        "name" : "HTML웹프로그래밍입문",
+        "price" : 1,
+        "image" : "images/HTML2.png"
+    },
+    {
+        "name" : "HTML태그사전",
+        "price" : 3,
+        "image" : "images/HTML3.png"
+    },
+    {
+        "name" : "CSS완벽가이드",
+        "price" : 5,
+        "image" : "images/css1.png"
+    },
+    {
+        "name" : "CSS설계실전가이드",
+        "price" : 4,
+        "image" : "images/css2.png"
+    },
+    {
+        "name" : "웹디자이너를위한CSS3",
+        "price" : 6,
+        "image" : "images/css3.png"
+    },
+    {
+        "name" : "JAVA의정석",
+        "price" : 8,
+        "image" : "images/java1.png"
+    }, 
+    {
+        "name" : "혼자공부하는JAVA",
+        "price" : 7,
+        "image" : "images/java2.png"
+    },                 
+    {
+        "name" : "이것이JAVA다",
+        "price" : 9,
+        "image" : "images/java3.png"
+    },       
+    {
+        "name" : "JAVAProgramming",
+        "price" : 10,
+        "image" : "images/java4.png"
+    }       
+]
