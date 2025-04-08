@@ -9,53 +9,54 @@
         <p class = "title">Welcome to INTERNET-PROGRAMMING MOVIE SITE</p>
 
         <div class="auth-links">
-            <a href = "login.html">로그인</a>
+            <a id = "login" href = "login.html">로그인</a>
             <span class="divider">|</span>
-            <a href = "signup.html">회원가입</a>
+            <a id = "signup" href = "signup.html">회원가입</a>
         </div>
             
-        <div class = "solid">
-            <form>
+        <div class = "container">
+            <form method = "get">
                 <p>
-                    <label>이름: <input name = "name" autofocus /></label>
+                    <label>이름: <input name = "name" type = "text" autofocus /></label>
                 </p>
                 <p>
                     <label>생일: <input name = "birth" type = "date" /></label>
                 </p>
                 <p>
-                    <label>성별: </label>
-                    <div>
+                    <label>성별: 
                         <label><input type = "radio" name = "gender" value = "male">남성</label>
-                        <label><input type = "radio" name = "gender" value = "female">여성</label>
-                    </div>
+                        <label><input type = "radio" name = "gender" value = "female">여성</label>  
+                    </label>
                 </p>
                 <p>
                     <label>학년: <input name = "grade" type = "number" min = "1" max = "6" step = "1" value = "1"></label>
                 </p>
                 <p>
-                    <label>아이디: <input name = "id"></label>
+                    <label>아이디: <input name = "id" type = "text" autocomplete="on"></label>
                 </p>
                 <p>
-                    <label>비밀번호: <input name = "password"></label>
+                    <label>비밀번호: <input name = "password" type = "text" required></label>
                 </p>
                 <p>
                     <label>이메일: <input name = "email" type = "email" placeholder="name@domain.com"></label>
                 </p>
                 <p>
-                    <label for = "txtList">보안질문: <input type = "text" id = "txtList" name = "security" list = "questions"></label>
-                    <datalist id = "questions">
-                        <option value = "어머니의 성함은?">
-                        <option value = "졸업한 초등학교는?">
-                        <option value = "나의 별명은?">
-                    </datalist>
+                    <label for = "txtList">보안질문: 
+                        <select name = "security">
+                            <option value="" disabled selected hidden>질문을 선택하세요</option>
+                            <option value = "어머니의 성함은?">어머니의 성함은?</option>
+                            <option value = "졸업한 초등학교는?">졸업한 초등학교는?</option>
+                            <option value = "나의 별명은?">나의 별명은?</option>
+                        </select>
+                    </label>
                 </p>
                 <p>
-                    <label>답변: <input name = "answer"></label>
+                    <label>답변: <input name = "answer" type = "text"></label>
                 </p>
                 
                 <p>
-                    <input type = "submit" value = "Signup" />
-                    <input type = "reset" value = "Cancel" />
+                    <input class = "button" type = "submit" value = "Signup" />
+                    <input class = "button" type = "reset" value = "Cancel" />
                 </p>
             </form>
         </div>
