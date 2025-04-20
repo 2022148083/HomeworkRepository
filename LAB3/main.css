@@ -134,10 +134,12 @@ hr.divider{
     transform: scale(1.3, 1.3);
     transition-duration: 2s;
 }
+
 .titleText{
     font-size: 30px;
     font-weight: 500;
 }
+
 
 .movieText{
     position: relative;
@@ -174,6 +176,10 @@ section{column-count: 2;column-gap: 30px; column-rule: 1px outset black;}
         margin: 0 auto;
     }
     section{column-count: 1;column-gap: 30px; column-rule: 1px outset black;}
+
+    .titleText{
+        text-align: center;
+    }
 }
 
 @media screen and (min-width: 481px) and (max-width: 800px){
