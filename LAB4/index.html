@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인프밍 영화 정보</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>인프밍 영화 정보 사이트입니다.</h1>
+        </header>
+        <nav>
+            <a href="index.html">메인페이지</a>
+            <a href="login.html">로그인</a>
+            <a href="signup.html">회원가입</a>
+        </nav>
+
+        <div class="search-filter-section">
+            <div class="search-controls">
+                <input type="text" id="searchInput" placeholder="키워드를 입력하세요. (영화 제목)">
+                <button id="searchButton">Filter results</button>
+            </div>
+            <div class="sort-options">
+                <h3>정렬 기준</h3>
+                <label><input type="radio" name="sort" value="rating_desc"> 평점 내림차순</label>
+                <label><input type="radio" name="sort" value="rating_asc"> 평점 오름차순</label>
+                <label><input type="radio" name="sort" value="date_desc"> 개봉일 내림차순</label>
+                <label><input type="radio" name="sort" value="date_asc"> 개봉일 오름차순</label>
+            </div>
+        </div>
+        
+        <h2 class="movies-title">Movies</h2>
+        <div id="movie-grid">
+            <!-- 영화 카드들이 여기에 동적으로 추가됩니다 -->
+        </div>
+        <!-- <button id="load-more" class="hidden">더 보기</button> --> 
+        <!-- 무한 스크롤로 대체되므로 이 버튼은 필요 없습니다. 주석 처리하거나 삭제합니다. -->
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const movieGrid = document.getElementById('movie-grid');
+            const searchInput = document.getElementById('searchInput');
+            const searchButton = document.getElementById('searchButton');
+            const sortRadios = document.querySelectorAll('input[name="sort"]');
+            // const loadMoreButton = document.getElementById('load-more'); // 더 보기 버튼 사용 안함
+
+            let allMovies = [];
+            let filteredMovies = [];
+            let displayedMoviesCount = 0;
+            const moviesPerLoad = 8; // 한 번에 로드할 영화 수
+            let isLoading = false; // 데이터 로딩 중복 방지 플래그
+
+            // 슬라이드 2: fetch Code Skeleton 참고
+            // Step 1: Write a function to "fetch" data from a URL
+            async function fetchData(url) {
+                const response = await fetch(url);
+                return checkStatus(response); // Step 2: Implement callback functions (checkStatus)
+            }
+
+            // Step 2: Implement callback functions - checkStatus
+            function checkStatus(response) {
+                if (response.ok) { // response.ok는 HTTP 상태 코드가 200-299 범위인지 확인
+                    return response.json(); // 데이터가 JSON 형식이므로 .json() 사용
+                } else {
+                    // 에러가 발생하면 Promise를 reject하여 catch 블록에서 처리할 수 있도록 함
+                    return Promise.reject(new Error(`HTTP 오류! 상태: ${response.status} (${response.statusText})`));
+                }
+            }
+
+            // Step 2: Implement callback functions - processData (데이터 처리 및 화면 표시)
+            function processInitialData(movies) {
+                allMovies = movies;
+                filteredMovies = [...allMovies]; // 초기에는 product.json 순서 그대로 사용
+                // applySort(); // <<--- 초기 정렬 제거: 사용자가 선택하기 전까지 정렬하지 않음
+                loadInitialMovies(); // 영화 목록을 화면에 처음 로드 (JSON 파일 순서대로)
+            }
+
+            // Step 2: Implement callback functions - handleError (에러 처리)
+            function handleError(error) {
+                console.error("영화를 불러오는 중 오류 발생:", error);
+                movieGrid.innerHTML = `<p>영화를 불러올 수 없습니다. 오류: ${error.message}. 
+                                     나중에 다시 시도해주세요. 
+                                     (만약 로컬에서 파일을 직접 열었다면, 'Live Server'와 같은 웹 서버를 사용해 보세요. 
+                                     브라우저 보안 정책으로 인해 로컬 파일 접근이 제한될 수 있습니다.)</p>`;
+                // loadMoreButton.classList.add('hidden'); // 에러 시 "더 보기" 버튼 숨김 - 더 보기 버튼 사용 안함
+            }
+
+            // 영화 데이터 초기화 및 로드 함수
+            async function initializeMovieApp() {
+                try {
+                    const movies = await fetchData('product.json'); // product.json 파일로부터 데이터 가져오기
+                    processInitialData(movies);
+                } catch (error) {
+                    handleError(error);
+                }
+            }
+
+            function createMovieCard(movie) {
+                const card = document.createElement('div');
+                card.classList.add('movie-card');
+
+                const poster = document.createElement('img');
+                poster.src = movie.poster_path;
+                poster.alt = movie.title;
+
+                const title = document.createElement('h3');
+                title.textContent = movie.title;
+
+                const releaseDate = document.createElement('p');
+                releaseDate.textContent = `개봉일: ${movie.release_date}`;
+
+                const rating = document.createElement('p');
+                rating.textContent = `평점: ⭐ ${movie.vote_average}/10`;
+                
+                const movieInfoDiv = document.createElement('div');
+                movieInfoDiv.classList.add('movie-info');
+                movieInfoDiv.appendChild(title);
+                movieInfoDiv.appendChild(releaseDate);
+                movieInfoDiv.appendChild(rating);
+
+                const plotOverlay = document.createElement('div');
+                plotOverlay.classList.add('movie-plot-overlay');
+                plotOverlay.innerHTML = `줄거리: <br> ${movie.overview}`;
+
+                card.appendChild(poster);
+                card.appendChild(movieInfoDiv);
+                card.appendChild(plotOverlay);
+                
+                return card;
+            }
+            
+            function loadInitialMovies() {
+                displayedMoviesCount = 0; // 표시된 영화 수 초기화
+                movieGrid.innerHTML = ''; // 기존 영화 카드들 제거
+                loadMoreMovies(); // 첫 번째 영화 묶음 로드
+            }
+
+            function loadMoreMovies() {
+                if (isLoading) return; // 이미 로딩 중이면 중복 실행 방지
+                if (displayedMoviesCount >= filteredMovies.length) { // 모든 영화가 로드되었으면 종료
+                    return;
+                }
+
+                isLoading = true;
+                // console.log('Loading more movies...'); // 디버깅용 로그
+
+                const moviesToDisplay = filteredMovies.slice(displayedMoviesCount, displayedMoviesCount + moviesPerLoad);
+                moviesToDisplay.forEach(movie => {
+                    const movieCard = createMovieCard(movie);
+                    movieGrid.appendChild(movieCard);
+                });
+                displayedMoviesCount += moviesToDisplay.length;
+
+                isLoading = false;
+            }
+
+            function applyFilterAndSort() {
+                const searchTerm = searchInput.value.toLowerCase().trim();
+                filteredMovies = allMovies.filter(movie => 
+                    movie.title.toLowerCase().includes(searchTerm) || 
+                    (movie.overview && movie.overview.toLowerCase().includes(searchTerm))
+                );
+                applySort(); // 필터링된 결과에 대해 정렬 적용
+                loadInitialMovies(); // 필터링 및 정렬된 영화 목록으로 화면 갱신
+            }
+
+            function applySort() {
+                const sortValueChecked = document.querySelector('input[name="sort"]:checked');
+                if (!sortValueChecked) { // 선택된 정렬 옵션이 없으면 (초기 상태 또는 사용자가 선택 안함)
+                    // 원본 순서(또는 현재 필터링된 순서)를 유지하므로 별도 작업 불필요
+                    // filteredMovies는 이미 해당 상태를 가지고 있음
+                    return; 
+                }
+                const sortValue = sortValueChecked.value;
+                switch (sortValue) {
+                    case 'rating_desc':
+                        filteredMovies.sort((a, b) => b.vote_average - a.vote_average);
+                        break;
+                    case 'rating_asc':
+                        filteredMovies.sort((a, b) => a.vote_average - b.vote_average);
+                        break;
+                    case 'date_desc':
+                        filteredMovies.sort((a, b) => new Date(b.release_date) - new Date(a.release_date));
+                        break;
+                    case 'date_asc':
+                        filteredMovies.sort((a, b) => new Date(a.release_date) - new Date(b.release_date));
+                        break;
+                }
+            }
+
+            // 이벤트 리스너 설정
+            searchButton.addEventListener('click', applyFilterAndSort);
+            searchInput.addEventListener('keypress', (event) => {
+                if (event.key === 'Enter') {
+                    applyFilterAndSort();
+                }
+            });
+
+            sortRadios.forEach(radio => {
+                radio.addEventListener('change', () => {
+                    applySort(); // 정렬 기준 변경 시 정렬만 다시 적용하고
+                    loadInitialMovies(); // 화면 갱신
+                });
+            });
+            
+            window.addEventListener('scroll', () => {
+                const scrollThreshold = 100; 
+                if (!isLoading && (window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - scrollThreshold) {
+                    loadMoreMovies();
+                }
+            });
+
+            initializeMovieApp();
+        });
+    </script>
+</body>
+</html>

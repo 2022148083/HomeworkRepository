@@ -1,0 +1,170 @@
+[
+  {
+    "id": 1,
+    "title": "Inception",
+    "poster_path": "https://i.namu.wiki/i/w_i8Bny8ETZdWQX27uDEfKIu5DHq-c9v0IWRYe27DyHisTr3-Yx12in_T5Jl3FJosJc81EbChVs-sqIU-KhviaXvD3FJuEdvmrj4zvl0JooLEd2tRcUMSm7aQ5WTqAXW7L8XRQkDnXDHDl59R87G0w.webp",
+    "overview": "Cobb, a skilled thief who commits corporate espionage by infiltrating the subconscious of his targets is offered a chance to regain his old life as payment for a task considered to be impossible: \"inception\", the implantation of another person's idea into a target's subconscious.",
+    "release_date": "2010-07-21",
+    "vote_average": 8.1
+  },
+  {
+    "id": 2,
+    "title": "Interstellar",
+    "poster_path": "https://i.namu.wiki/i/A92oBuOLsWdwcylEZkWZmYZU3kqub2ct4e16abYeVrYLy-nQcvYRpoe0fVpA_S0vTm5ZSdYInCwn3AaoNuhhBEaTmxoghbhC972NI0s5obpIcFoznXgfu7_b5mnS_M72QITQtJmEdfdkictPT5KeSw.webp",
+    "overview": "Interstellar chronicles the adventures of a group of explorers who make use of a newly discovered wormhole to surpass the limitations on human space travel and conquer the vast distances involved in an interstellar voyage.",
+    "release_date": "2014-11-06",
+    "vote_average": 8.1
+  },
+  {
+    "id": 3,
+    "title": "3 idiots",
+    "poster_path": "https://i.namu.wiki/i/uPdTevg_kgBddq5lCEmJdMyQVu5leC1AOONQ5669MR6DLbyXU92dCDa0Yg7bTe8wJjMoRUWyt0v00oJ--ZuR6a8auSN9Ozs0E9n_QEJ8cG2bOJ8zfLKa4lMdawo9MJ9ggLacn2GL3tDTlBwgntpCBQ.webp",
+    "overview": "In the tradition of \"Ferris Bueller's Day Off\" comes this refreshing comedy about a rebellious prankster with a crafty mind and a heart of gold. Rascal. Joker. Dreamer. Genius... You've never met a college student quite like \"Rancho.\" From the moment he arrives at India's most prestigious university, Rancho's outlandish schemes turn the campus upside down—along with the lives of his two newfound best friends. Together, they make life miserable for \"Virus,\" the school's uptight and heartless dean. But when Rancho catches the eye of the dean's sexy daughter, Virus sets his sights on flunking out the \"3 idiots\" once and for all.",
+    "release_date": "2011-08-17",
+    "vote_average": 7.8
+  },
+  {
+    "id": 4,
+    "title": "begin again",
+    "poster_path": "https://i.namu.wiki/i/Q2gh1eDdb1NFec02UEiNFrVHpuqNBVjptb77gl39NV7PfQRwMA4JVWJD-Id_R03VX_IKf5WuQMOCcBKnNBv-MV_gvSnvVdVf3i2PTrbt-y-UcGSCyt2wAUVRGDTnQdB326JtF3sCp8xt06BQwtLC3Q.webp",
+    "overview": "Gretta's celebrity boyfriend breaks up with her after a long-term relationship, leaving the singer to find success on her own. With the help of record producer, Dan and hip-hop celebrity, Trouble Gum, Gretta strives to fulfil her musical ambitions.",
+    "release_date": "2014-08-13",
+    "vote_average": 7.3
+  },
+  {
+    "id": 5,
+    "title": "The Avengers",
+    "poster_path": "https://i.namu.wiki/i/3SBqEpDMQbVk483fSEOXn-k2LXf9js0-npwt38ng9RLTNMv2nIx1o0f3GkYQiweNK2HksQc84gLYGrWPdHbf9iF4JEofw55CnVKs2U6x_fax6WTPWJAzXLM1GEXc6Sa9FOKeDjhvehb-81b7hYzNbA.webp",
+    "overview": "When an unexpected enemy emerges and threatens global safety and security, Nick Fury, director of the international peacekeeping agency known as S.H.I.E.L.D., finds himself in need of a team to pull the world back from the brink of disaster. Spanning the globe, a daring recruitment effort begins!",
+    "release_date": "2012-04-26",
+    "vote_average": 7.4
+  },
+  {
+    "id": 6,
+    "title": "Toy Story",
+    "poster_path": "https://i.namu.wiki/i/LqW5zKfRtvL42RD91Q3mgzoB44uIQ6TsBfyEhZ5SqLvi8R5C6Vh5ACIqwDbM7GZts4mbR-mAnR7L5erP9eECsnzc3R90jC3H5SdeGBFzKXhYqK132yHqeqdy8YIvdgpPt6DcRJ2sxk92AundypG-Dg.webp",
+    "overview": "Led by Woody, Andy's toys live happily in his room until Andy's birthday brings Buzz Lightyear onto the scene. Afraid of losing his place in Andy's heart, Woody plots against Buzz. But when circumstances separate Buzz and Woody from their owner, the duo eventually learns to put aside their differences.",
+    "release_date": "1995-12-30",
+    "vote_average": 7.7
+  },
+  {
+    "id": 7,
+    "title": "Toy Story2",
+    "poster_path": "https://i.namu.wiki/i/L0uLZfBCbucKZIhWX55dQqTldl_-AH9Rn4wGrp6WAnlFp4qfvsCUvwOsQGhZi_Iz0oHv-Ditx72daQTPXxu5RoaOp-iMlUh2Sr2OYWx-5h-IPwynmYQ2y-7wP2OjgBSi5ms2EmoGU4RYXEteai9smA.webp",
+    "overview": "Andy heads off to Cowboy Camp, leaving his toys to their own devices. Things shift into high gear when an obsessive toy collector named Al McWhiggen, owner of Al's Toy Barn kidnaps Woody. Andy's toys mount a daring rescue mission, Buzz Lightyear meets his match and Woody has to decide where he and his heart truly belong.",
+    "release_date": "1999-12-18",
+    "vote_average": 7.3
+  },
+  {
+    "id": 8,
+    "title": "Toy Story3",
+    "poster_path": "https://i.namu.wiki/i/FYQ7seIPKtWuGnYmnMP0v7VYYHzWTf5_LKpA4xCp-q3iCdknLNAYTbJfUv-lkVPlZDULlO6rbiFY2afgnU7jm4iEKDUjKi_fGxD4E461QQOQj3OO-3WwSSATHdaPGoGmnoy1T6s8Yhplv02B3WOF6Q.webp",
+    "overview": "Woody, Buzz, and the rest of Andy's toys haven't been played with in years. With Andy about to go to college, the gang find themselves accidentally left at a nefarious day care center. The toys must band together to escape and return home to Andy.",
+    "release_date": "2010-08-05",
+    "vote_average": 7.6
+  },
+  {
+    "id": 9,
+    "title": "The Shawshank Redemption",
+    "poster_path": "https://i.namu.wiki/i/rtCBgFVIrQ2FYsWYFKBGwDv7mMLv9KIAmHfpS-j0IzI63SowHywq9SQDbLCuLjmDb2eIm8Vdyd94dYfnnokGeXjnKdcuSvmY_rWFCGp2GuHGoqFsFgV255ZPwqxCEQQMF2WisY_j1HnIi_zvC9Zc3w.webp",
+    "overview": "Framed in the 1940s for the double murder of his wife and her lover, upstanding banker Andy Dufresne begins a new life at the Shawshank prison, where he puts his accounting skills to work for an amoral warden. During his long stretch in prison, Dufresne comes to be admired by the other inmates -- including an older prisoner named Red -- for his integrity and unquenchable sense of hope.",
+    "release_date": "1995-02-04",
+    "vote_average": 9.3
+  },
+  {
+    "id": 10,
+    "title": "Forrest Gump",
+    "poster_path": "https://i.namu.wiki/i/dDVZQbh6hxieTmJguZAsokx5049z5FDdJeXgtq1zfxIGvCCTEpXg6vV2nNNL56B1joxIy_qID3YJBx4fy4ibHW1bvbxQAH8kKIVhdaazQkX7b8roTvtXaCJw9jKXVL4xir0PJmE7PUwJCgSI9_kqkQ.webp",
+    "overview": "A man with a low IQ has accomplished great things in his life and been present during significant historic events - in each case, far exceeding what anyone imagined he could do. Yet, despite all the things he has attained, his one true love eludes him. 'Forrest Gump' is the story of a man who rose above his challenges, and who proved that determination, courage, and love are more important than ability.",
+    "release_date": "1994-10-15",
+    "vote_average": 8.2
+  },
+  {
+    "id": 11,
+    "title": "Harry Potter and the Philosopher's Stone",
+    "poster_path": "https://i.namu.wiki/i/8ixXmxaxs-mpYRn2Ta_N2pOvMSsbcQjs2zEzZsuNob-7P1M-asdkGk8jBe4PRl-La1pzvMXnzQAHbV0ZXPmAxcPQNbELV9Tc0g3Viq4EXnvuMdwqWvv7BVqeCO_Sm5j9uNsMVkF_DaqIv8Ti4CS8Lw.webp",
+    "overview": "Harry Potter has lived under the stairs at his aunt and uncle's house his whole life. But on his 11th birthday, he learns he's a powerful wizard -- with a place waiting for him at the Hogwarts School of Witchcraft and Wizardry. As he learns to harness his newfound powers with the help of the school's kindly headmaster, Harry uncovers the truth about his parents' deaths -- and about the villain who's to blame.",
+    "release_date": "2001-12-14",
+    "vote_average": 7.5
+  },
+  {
+    "id": 12,
+    "title": "Harry Potter and the Chamber of Secrets",
+    "poster_path": "https://i.namu.wiki/i/dDWFE-tzdMJi0DiXEDWM_rejgqN1o0QR05VYOIVeHBxMFqephEc0ejUd4H6wyO6jfDhm2IiF5PsrCylN4EZFTbvNT2Ga0cuZPjTBI20et5p0hdJGU2P-MASOAQ0gSSfxcEiSDD_Os_BIxsd3tmbtdA.webp",
+    "overview": "Ignoring threats to his life, Harry returns to Hogwarts to investigate – aided by Ron and Hermione – a mysterious series of attacks.",
+    "release_date": "2002-12-13",
+    "vote_average": 7.4
+  },
+  {
+    "id": 13,
+    "title": "Harry Potter and the Prisoner of Azkaban",
+    "poster_path": "https://i.namu.wiki/i/GWkFwy7_72bAQW1jD5WB3Sk-QIpSGCXPFzt-c9VrFaYSV8Kczbbr5JBf6woBgCMvNO0m11Vyay9KTegbQQo8ErBSy0zer32MUbBwn-_UQZe6pfGwO95k_6CzcgxygTxTVTf4lu_KI0cEEkgAdr2F6g.webp",
+    "overview": "Harry, Ron and Hermione return to Hogwarts for another magic-filled year. Harry comes face to face with danger yet again, this time in the form of escaped convict, Sirius Black ??and turns to sympathetic Professor Lupin for help.",
+    "release_date": "2004-07-16",
+    "vote_average": 7.7
+  },
+  {
+    "id": 14,
+    "title": "Harry Potter and the Goblet of Fire",
+    "poster_path": "https://i.namu.wiki/i/BOtSeMhH-G6r1fZvfJhgz1RXpggQSh9EiYVaPmuWvB2JLNCSe_3CWlo-pDz9sX3q-vae6EGe_dHpbmS91ZvshV9cyfhLr8ShdPq8foygYPHVYAnAOQ2ibwbpQ98kMLbopy8tqKWd4Ljy6N2CmIJcGw.webp",
+    "overview": "Harry starts his fourth year at Hogwarts, competes in the treacherous Triwizard Tournament and faces the evil Lord Voldemort. Ron and Hermione help Harry manage the pressure ??but Voldemort lurks, awaiting his chance to destroy Harry and all that he stands for.",
+    "release_date": "2005-12-01",
+    "vote_average": 7.5
+  },
+  {
+    "id": 15,
+    "title": "Harry Potter and the Order of the Phoenix",
+    "poster_path": "https://i.namu.wiki/i/Es3fEkiOrmbDYjDAi-iS9DkJaRTV1Vl44sf1EWqTzOcStGSGtZJMrzL_t3AXx453ZY9qKV1O-dDzhwxrqqpyYMFfHDiFb6h6DpTsc7RzxfNIUNFTqmgqoH7Uuww-9s6ShnB88hyQ_GdJN1z7OQmDJQ.webp",
+    "overview": "Returning for his fifth year of study at Hogwarts, Harry is stunned to find that his warnings about the return of Lord Voldemort have been ignored. Left with no choice, Harry takes matters into his own hands, training a small group of students ??dubbed 'Dumbledore's Army' ??to defend themselves against the dark arts.",
+    "release_date": "2007-07-11",
+    "vote_average": 7.4
+  },
+  {
+    "id": 16,
+    "title": "Harry Potter and the Half-Blood Prince",
+    "poster_path": "https://i.namu.wiki/i/CHIyPhRe0KXe87PSEM0QVnfM_FobrfHrVP2VJ67-5n6rHSE-Bu4TRczxdrJWJAfJzkMTr-EVFxAJLcFPhp0YVOHO1TA6TfDL2I6QVdBIzuqmsxh_v5iVdKm3DZPvgpAl220BiEAeXLSmKmQi_HOMIg.webp",
+    "overview": "As Harry begins his sixth year at Hogwarts, he discovers an old book marked as 'Property of the Half-Blood Prince', and begins to learn more about Lord Voldemort's dark past.",
+    "release_date": "2009-07-12",
+    "vote_average": 7.4
+  },
+  {
+    "id": 17,
+    "title": "Harry Potter and the Deathly Hallows: Part 1",
+    "poster_path": "https://i.namu.wiki/i/-aqQQjZhpQcHV-0uYtSdRwP-k-0vqjJQaQDKDdpJPA7KSHhnBcgYAi2k0rTpC_wXqo-Bz_qsgqK7QAQEgk6gwWvT29U5_d-pqiosqmZei5JgHDk5rC8dbv6qqLNvhUQatvu_v-qVS09s_tuaCrydvw.webp",
+    "overview": "Harry, Ron and Hermione walk away from their last year at Hogwarts to find and destroy the remaining Horcruxes, putting an end to Voldemort's bid for immortality. But with Harry's beloved Dumbledore dead and Voldemort's unscrupulous Death Eaters on the loose, the world is more dangerous than ever.",
+    "release_date": "2010-12-15",
+    "vote_average": 7.5
+  },
+  {
+    "id": 18,
+    "title": "Harry Potter and the Deathly Hallows: Part 2",
+    "poster_path": "https://i.namu.wiki/i/k-zM6WilIbPzzqs2BPse0BomKPJTWOB0zHQxwc8Evoe2eAHnrKz4GEV7qWHmLhSxwgFoaO68k3ozO2Xe2CNduwEgpUbor48c4V503OypRblVTzcCpO4oYu8BjB8a-s3YCb1kKCgLCWu-1wOmfQur9g.webp",
+    "overview": "Harry, Ron and Hermione continue their quest to vanquish the evil Voldemort once and for all. Just as things begin to look hopeless for the young wizards, Harry discovers a trio of magical objects that endow him with powers to rival Voldemort's formidable skills.",
+    "release_date": "2011-07-13",
+    "vote_average": 7.9
+  },
+  {
+    "id": 19,
+    "title": "Iron man",
+    "poster_path": "https://i.namu.wiki/i/asrh_Ia5bzj36f8u4vRGSkyuH84_qZa4vzRdpf1lNPAQx9mb1FClYPBr_pkkxT_ZuREqE9WZ19SUHGepr1ygxnQv3fcbSECRMeZWTJN8Ot6I5vorPvO1eE0jUr0iVbUwkLfVyIHVCuQ7I9qD-VDoOA.webp",
+    "overview": "After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.",
+    "release_date": "2008-04-30",
+    "vote_average": 7.4
+  },
+  {
+    "id": 20,
+    "title": "Iron man2",
+    "poster_path": "https://i.namu.wiki/i/FACjLAPbKeZOj-WjmcVUrtbqlMLle-m4C1VSdb8cp1wntLsKb34nsZHO81SaDiAQSDW5sbngW4UrN4JmL4tcQlgtvjonhqZK0zpJ2cI_l3l0ftFEINAhjEu9470AacLrfpg51711vXKn39THgJYFNw.webp",
+    "overview": "With the world now aware of his dual life as the armored superhero Iron Man, billionaire inventor Tony Stark faces pressure from the government, the press and the public to share his technology with the military. Unwilling to let go of his invention, Stark, with Pepper Potts and James 'Rhodey' Rhodes at his side, must forge new alliances ??and confront powerful enemies.",
+    "release_date": "2010-04-29",
+    "vote_average": 6.6
+  },
+  {
+    "id": 21,
+    "title": "Avengers: Age of Ultron",
+    "poster_path": "https://i.namu.wiki/i/rqyIkiUGUl4Tgg3zhgGSnO5BWyxCrYqzRkqqWmK3atKGSTZJCdPbL23lVtQtENzU3jckkHyts5fBs8iY5MGvV6Uj9i1t1iMO4EZoc3C08xk50pAbkIJ_bKZpRDywd5PY5nY_QDT02RdTk3f-so-OGg.webp",
+    "overview": "When Tony Stark tries to jumpstart a dormant peacekeeping program, things go awry and Earth?셲 Mightiest Heroes are put to the ultimate test as the fate of the planet hangs in the balance. As the villainous Ultron emerges, it is up to The Avengers to stop him from enacting his terrible plans, and soon uneasy alliances and unexpected action pave the way for an epic and unique global adventure.",
+    "release_date": "2015-04-23",
+    "vote_average": 7.3
+  }
+]
