@@ -285,7 +285,7 @@ h2.movies-title {
 .form-group input[type="text"],
 .form-group input[type="password"],
 .form-group input[type="email"] {
-    width: calc(100% - 22px); 
+    width: calc(100% - 22px);  
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;

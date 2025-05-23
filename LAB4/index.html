@@ -147,7 +147,7 @@
             function applyFilterAndSort() {
                 const searchTerm = searchInput.value.toLowerCase().trim();
                 filteredMovies = allMovies.filter(movie => 
-                    movie.title.toLowerCase().includes(searchTerm) || 
+                    movie.title.toLowerCase().includes(searchTerm) ||  
                     (movie.overview && movie.overview.toLowerCase().includes(searchTerm))
                 );
                 applySort(); 
