@@ -108,7 +108,7 @@ nav a:hover {
 .search-filter-section {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start; /* Align items to the top */
+    align-items: flex-start; 
     margin-bottom: 20px;
     padding: 15px;
     background-color: #f9f9f9;
@@ -119,8 +119,8 @@ nav a:hover {
 .search-controls {
     display: flex;
     align-items: center;
-    flex-grow: 1; /* Allow search controls to take up available space */
-    margin-right: 20px; /* Space between search and sort */
+    flex-grow: 1; 
+    margin-right: 20px; 
 }
 
 .search-controls input[type="text"] {
@@ -128,7 +128,7 @@ nav a:hover {
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
-    flex-grow: 1; /* Input field takes remaining space */
+    flex-grow: 1; 
     margin-right: 10px;
 }
 
@@ -147,7 +147,7 @@ nav a:hover {
 }
 
 .sort-options {
-    min-width: 200px; /* Ensure sort options have enough space */
+    min-width: 200px; 
     padding: 10px;
     border: 1px solid #ddd;
     background-color: #fff;
@@ -195,9 +195,9 @@ h2.movies-title {
     padding: 15px;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    position: relative; /* For plot overlay */
-    overflow: hidden; /* Ensures plot overlay fits card */
-    min-height: 380px; /* Fixed height to align cards */
+    position: relative; 
+    overflow: hidden; 
+    min-height: 380px; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -205,8 +205,8 @@ h2.movies-title {
 
 .movie-card img {
     max-width: 100%;
-    height: 280px; /* Fixed height for posters */
-    object-fit: cover; /* Scale image nicely */
+    height: 280px; 
+    object-fit: cover; 
     border-radius: 4px;
     margin-bottom: 10px;
 }
@@ -215,7 +215,7 @@ h2.movies-title {
     font-size: 16px;
     margin: 10px 0 5px;
     color: #333;
-    min-height: 38px; /* For 2 lines of title */
+    min-height: 38px; 
 }
 
 .movie-card p {
@@ -225,7 +225,7 @@ h2.movies-title {
 }
 
 .movie-info {
-    margin-top: auto; /* Pushes info to bottom if card content is short */
+    margin-top: auto; 
 }
 
 .movie-plot-overlay {
@@ -233,7 +233,7 @@ h2.movies-title {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%; /* Cover the poster area or entire card */
+    height: 100%; 
     background-color: rgba(0, 0, 0, 0.85);
     color: white;
     padding: 15px;
@@ -243,11 +243,11 @@ h2.movies-title {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
-    overflow-y: auto; /* Scroll if plot is too long */
+    overflow-y: auto; 
     text-align: left;
     display: flex;
-    align-items: center; /* Vertically center text */
-    justify-content: center; /* Horizontally center text */
+    align-items: center;
+    justify-content: center; 
 }
 
 .movie-card:hover .movie-plot-overlay {
@@ -285,7 +285,7 @@ h2.movies-title {
 .form-group input[type="text"],
 .form-group input[type="password"],
 .form-group input[type="email"] {
-    width: calc(100% - 22px); /* Account for padding and border */
+    width: calc(100% - 22px); 
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
