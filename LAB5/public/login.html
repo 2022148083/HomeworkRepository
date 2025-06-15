@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>로그인</title> 
+        <link rel="stylesheet" type = "text/css" href="/main.css"> 
+    </head>
+    <body class = "setting">
+        <p class = "title">Welcome to INTERNET-PROGRAMMING MOVIE SITE</p>
+
+        
+        <div class="auth-links">
+            <a href="/">메인페이지</a> 
+            <span class="divider">|</span>
+            <a href="/login" id = "login">로그인</a> 
+            <span class="divider">|</span>
+            <a href="/signup">회원가입</a> 
+        </div>
+
+        <div class = "container">
+            <form method = "get">
+                <p>
+                    <label>아이디: </label>
+                    <input name = "ID" type = "text" autofocus placeholder="아이디 입력"/>
+                </p>
+                <p>
+                    <label>비밀번호: </label>
+                    <input name = "password" type = "text" placeholder="비밀번호 입력"/>
+                </p>
+
+                <p>
+                    <input class = "button" type = "submit" value = "Login" />
+                    <input class = "button" type = "reset" value = "Cancel" />
+                </p>
+            </form>
+        </div>
+    </body>
+</html>
